@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -43,11 +42,11 @@ font-size:20px;
 
 .redes{
 margin-top:20px;
-font-size:16px;
 }
 
 .redes p{
-margin:8px 0;
+margin:6px 0;
+font-size:16px;
 }
 
 .separador{
@@ -61,9 +60,9 @@ margin:25px auto;
 background:#d6b4a2;
 color:white;
 padding:15px;
-border-radius:12px;
 max-width:800px;
 margin:20px auto;
+border-radius:12px;
 text-align:center;
 font-weight:bold;
 }
@@ -87,8 +86,8 @@ font-size:18px;
 .categorias{
 display:flex;
 justify-content:center;
-flex-wrap:wrap;
 gap:15px;
+flex-wrap:wrap;
 padding:20px;
 max-width:1200px;
 margin:auto;
@@ -96,7 +95,7 @@ margin:auto;
 
 .categoria{
 background:white;
-padding:12px 20px;
+padding:12px 22px;
 border-radius:30px;
 text-decoration:none;
 color:#5f5755;
@@ -117,11 +116,18 @@ margin-top:50px;
 margin-bottom:20px;
 }
 
+.subtitulo{
+text-align:center;
+font-size:28px;
+margin-top:80px;
+margin-bottom:20px;
+}
+
 .productos{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:25px;
-padding:40px;
+padding:20px 40px;
 max-width:1200px;
 margin:auto;
 }
@@ -188,6 +194,13 @@ text-align:center;
 color:#777;
 }
 
+.mensaje{
+text-align:center;
+padding:15px;
+color:#888;
+font-style:italic;
+}
+
 </style>
 
 </head>
@@ -215,9 +228,7 @@ Estilo, practicidad y calidad para acompañarte todos los días.
 </header>
 
 <div class="promocion">
-
 💸 10% OFF abonando en efectivo en productos seleccionados
-
 </div>
 
 <section class="quienes">
@@ -225,36 +236,55 @@ Estilo, practicidad y calidad para acompañarte todos los días.
 <h2>Quiénes Somos</h2>
 
 <p>
-En KABYMÁS creemos que los mejores accesorios son aquellos que combinan estilo,
-practicidad y calidad. Trabajamos para acercarte productos seleccionados con dedicación,
-pensados para acompañarte en el día a día y adaptarse a distintos momentos y necesidades.
+En KABYMÁS creemos que los mejores accesorios son aquellos que combinan estilo, practicidad y calidad.
+Trabajamos para acercarte productos seleccionados con dedicación, pensados para acompañarte en cada momento y adaptarse a distintas necesidades y estilos de vida.
 </p>
 
 </section>
 
 <section class="categorias">
 
-<a href="#catalogo" class="categoria">👜 Bolsos y Carteras</a>
+<a class="categoria" href="#bolsos">👜 Bolsos y Carteras</a>
 
-<a href="#catalogo" class="categoria">🎒 Mochilas y Porta Notebook</a>
+<a class="categoria" href="#mochilas">🎒 Mochilas y Porta Notebook</a>
 
-<a href="#catalogo" class="categoria">👝 Billeteras y Riñoneras</a>
+<a class="categoria" href="#billeteras">👝 Billeteras y Riñoneras</a>
 
-<a href="#catalogo" class="categoria">📱 Porta Celulares y Accesorios</a>
+<a class="categoria" href="#accesorios">📱 Porta Celulares y Accesorios</a>
 
-<a href="#catalogo" class="categoria">🧉 Materas y Loncheras</a>
+<a class="categoria" href="#materas">🧉 Materas y Loncheras</a>
 
-<a href="#catalogo" class="categoria">🏃 Deportes y Aire Libre</a>
+<a class="categoria" href="#deportes">🏃 Deportes y Aire Libre</a>
 
-<a href="#catalogo" class="categoria">🧸 Juguetes</a>
+<a class="categoria" href="#juguetes">🧸 Juguetes</a>
 
-<a href="#catalogo" class="categoria">☂️ Otros Complementos</a>
+<a class="categoria" href="#otros">☂️ Otros Complementos</a>
 
 </section>
 
-<h2 id="catalogo" class="titulo">
+<h2 class="titulo">
 Colección KABYMÁS
 </h2>
+
+<h3 id="bolsos" class="subtitulo">👜 Bolsos y Carteras</h3>
+
+<div class="mensaje">
+Próximamente nuevos productos.
+</div>
+
+<h3 id="mochilas" class="subtitulo">🎒 Mochilas y Porta Notebook</h3>
+
+<div class="mensaje">
+Próximamente nuevos productos.
+</div>
+
+<h3 id="billeteras" class="subtitulo">👝 Billeteras y Riñoneras</h3>
+
+<div class="mensaje">
+Próximamente nuevos productos.
+</div>
+
+<h3 id="accesorios" class="subtitulo">📱 Porta Celulares y Accesorios</h3>
 
 <section class="productos">
 
@@ -265,7 +295,7 @@ Colección KABYMÁS
 <div class="info">
 
 <div class="nombre">
-Nombre del Producto
+Producto de ejemplo
 </div>
 
 <div class="precio">
@@ -276,33 +306,7 @@ $ 0
 Stock disponible
 </div>
 
-<a href="https://wa.me/5493489570499" class="boton">
-Consultar
-</a>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="Producto 2.jpeg" alt="Producto">
-
-<div class="info">
-
-<div class="nombre">
-Nombre del Producto
-</div>
-
-<div class="precio">
-$ 0
-</div>
-
-<div class="stock">
-Stock disponible
-</div>
-
-<a href="https://wa.me/5493489570499" class="boton">
+<a class="boton" href="https://wa.me/5493489570499">
 Consultar
 </a>
 
@@ -311,6 +315,30 @@ Consultar
 </div>
 
 </section>
+
+<h3 id="materas" class="subtitulo">🧉 Materas y Loncheras</h3>
+
+<div class="mensaje">
+Próximamente nuevos productos.
+</div>
+
+<h3 id="deportes" class="subtitulo">🏃 Deportes y Aire Libre</h3>
+
+<div class="mensaje">
+Próximamente nuevos productos.
+</div>
+
+<h3 id="juguetes" class="subtitulo">🧸 Juguetes</h3>
+
+<div class="mensaje">
+Próximamente nuevos productos.
+</div>
+
+<h3 id="otros" class="subtitulo">☂️ Otros Complementos</h3>
+
+<div class="mensaje">
+Próximamente nuevos productos.
+</div>
 
 <section class="contacto">
 
@@ -321,7 +349,7 @@ Consultar
 <p>📱 WhatsApp: <strong>+54 9 3489 57-0499</strong></p>
 
 <p>
-✨ Seguinos para conocer novedades, promociones y nuevos ingresos.
+✨ Seguinos para conocer promociones, nuevos ingresos y novedades.
 </p>
 
 </section>
@@ -333,4 +361,5 @@ Consultar
 </footer>
 
 </body>
+
 </html>

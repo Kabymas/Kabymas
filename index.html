@@ -1,136 +1,157 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KABYMAS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KABYMAS</title>
 
-<style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body{
-margin:0;
-font-family:Arial, sans-serif;
-background:#f5f5f5;
-}
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
 
-header{
-background:#222;
-color:white;
-text-align:center;
-padding:40px 20px;
-}
+        header {
+            background: #1f1f1f;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
 
-header h1{
-margin:0;
-font-size:40px;
-}
+        header h1 {
+            font-size: 56px;
+            margin-bottom: 15px;
+        }
 
-header p{
-font-size:18px;
-}
+        header p {
+            font-size: 22px;
+        }
 
-.galeria{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:20px;
-padding:20px;
-max-width:1200px;
-margin:auto;
-}
+        .galeria {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
 
-.producto{
-background:white;
-border-radius:15px;
-overflow:hidden;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
-}
+        .producto {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 3px 12px rgba(0,0,0,.1);
+        }
 
-.producto img{
-width:100%;
-height:300px;
-object-fit:cover;
-}
+        .producto img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+        }
 
-.info{
-padding:15px;
-}
+        .info {
+            padding: 20px;
+        }
 
-.precio{
-color:#1a8f3c;
-font-size:28px;
-font-weight:bold;
-}
+        .info h3 {
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
 
-.stock{
-color:#666;
-margin-bottom:15px;
-}
+        .precio {
+            color: #118a39;
+            font-size: 38px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
 
-.boton{
-background:#25D366;
-color:white;
-text-decoration:none;
-padding:12px;
-display:block;
-text-align:center;
-border-radius:8px;
-font-weight:bold;
-}
+        .stock {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
 
-</style>
+        .boton {
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            padding: 14px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
 
+        .boton:hover {
+            background: #1ea952;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
-<h1>KABYMA</h1>
-<p>Mochilas • Bolsos • Riñoneras • Accesorios</p>
+    <h1>KABYMAS</h1>
+    <p>🎒 Mochilas • 👜 Bolsos • 👝 Riñoneras • ✨ Accesorios</p>
 </header>
 
 <section class="galeria">
 
-<div class="producto">
+    <div class="producto">
+        <img src="https://picsum.photos/500/500?random=1" alt="Producto">
 
-https://via.placeholder.com/400x400
+        <div class="info">
+            <h3>Mochila Urbana</h3>
 
-<div class="info">
+            <div class="precio">$45.000</div>
 
-<h3>Mochila Urbana</h3>
+            <div class="stock">
+                Stock: 3 unidades
+            </div>
 
-<div class="precio">$45.000</div>
+            <a class="boton" href="#">
+                Consultar por WhatsApp
+            </a>
+        </div>
+    </div>
 
-<div class="stock">Stock: 3 unidades</div>
+    <div class="producto">
+        <img src="https://picsum.photos/500/500?random=2" alt="Producto">
 
-#
-Consultar por WhatsApp
-</a>
+        <div class="info">
+            <h3>Riñonera Deportiva</h3>
 
-</div>
+            <div class="precio">$18.000</div>
 
-</div>
+            <div class="stock">
+                Stock: 5 unidades
+            </div>
 
-<div class="producto">
-
-https://via.placeholder.com/400x400
-
-<div class="info">
-
-<h3>Riñonera Deportiva</h3>
-
-<div class="precio">$18.000</div>
-
-<div class="stock">Stock: 5 unidades</div>
-
-#
-Consultar por WhatsApp
-</a>
-
-</div>
-
-</div>
+            <a class="boton" href="#">
+                Consultar por WhatsApp
+            </a>
+        </div>
+    </div>
 
 </section>
 
+<footer>
+    © KABYMAS
+</footer>
+
 </body>
+
 </html>

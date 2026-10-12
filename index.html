@@ -2,7 +2,6 @@
 <html lang="es">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,26 +9,29 @@
 
 <style>
 
+html{
+scroll-behavior:smooth;
+}
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial, sans-serif;
+font-family:Arial,sans-serif;
 background:#f7f0ea;
 color:#5f5755;
 }
 
 header{
 text-align:center;
-padding:50px 20px;
+padding:40px 20px;
 }
 
 header img{
-max-width:300px;
+max-width:320px;
 width:90%;
 }
 
@@ -38,22 +40,31 @@ margin-top:20px;
 font-size:20px;
 }
 
+.redes{
+margin-top:20px;
+font-size:16px;
+}
+
+.redes p{
+margin:8px 0;
+}
+
 .separador{
 width:120px;
 height:3px;
 background:#d6b4a2;
-margin:30px auto;
+margin:25px auto;
 }
 
 .promocion{
 background:#d6b4a2;
 color:white;
 padding:15px;
-max-width:700px;
-margin:20px auto;
 border-radius:12px;
-font-weight:bold;
+max-width:800px;
+margin:20px auto;
 text-align:center;
+font-weight:bold;
 }
 
 .quienes{
@@ -75,8 +86,8 @@ font-size:18px;
 .categorias{
 display:flex;
 justify-content:center;
-gap:15px;
 flex-wrap:wrap;
+gap:15px;
 padding:20px;
 max-width:1200px;
 margin:auto;
@@ -84,12 +95,12 @@ margin:auto;
 
 .categoria{
 background:white;
-padding:12px 22px;
+padding:12px 20px;
 border-radius:30px;
-box-shadow:0 2px 8px rgba(0,0,0,.08);
 text-decoration:none;
 color:#5f5755;
-font-weight:600;
+font-weight:bold;
+box-shadow:0 2px 8px rgba(0,0,0,.08);
 transition:.3s;
 }
 
@@ -101,8 +112,8 @@ color:white;
 .titulo{
 text-align:center;
 font-size:34px;
-margin-top:40px;
-margin-bottom:25px;
+margin-top:50px;
+margin-bottom:20px;
 }
 
 .productos{
@@ -139,8 +150,8 @@ margin-bottom:10px;
 
 .precio{
 font-size:28px;
-color:#c0846b;
 font-weight:bold;
+color:#c0846b;
 margin-bottom:10px;
 }
 
@@ -162,7 +173,7 @@ font-weight:bold;
 .contacto{
 max-width:900px;
 margin:60px auto;
-padding:30px;
+padding:20px;
 text-align:center;
 }
 
@@ -171,8 +182,8 @@ margin:10px 0;
 }
 
 footer{
-text-align:center;
 padding:40px;
+text-align:center;
 color:#777;
 }
 
@@ -189,6 +200,14 @@ color:#777;
 <p class="frase">
 Estilo, practicidad y calidad para acompañarte todos los días.
 </p>
+
+<div class="redes">
+
+<p>📷 Instagram: <strong>@kabymas</strong></p>
+
+<p>📱 WhatsApp: <strong>+54 9 3489 57-0499</strong></p>
+
+</div>
 
 <div class="separador"></div>
 
@@ -232,4 +251,85 @@ pensados para acompañarte en el día a día y adaptarse a distintos momentos y 
 
 </section>
 
-<h2 id="catalogo"
+<h2 id="catalogo" class="titulo">
+Colección KABYMÁS
+</h2>
+
+<section class="productos">
+
+<div class="card">
+
+<img src="Producto 1.jpeg" alt="Producto">
+
+<div class="info">
+
+<div class="nombre">
+Nombre del Producto
+</div>
+
+<div class="precio">
+$ 0
+</div>
+
+<div class="stock">
+Stock disponible
+</div>
+
+<a href="https://wa.me/5493489570499" class="boton">
+Consultar
+</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="Producto 2.jpeg" alt="Producto">
+
+<div class="info">
+
+<div class="nombre">
+Nombre del Producto
+</div>
+
+<div class="precio">
+$ 0
+</div>
+
+<div class="stock">
+Stock disponible
+</div>
+
+<a href="https://wa.me/5493489570499" class="boton">
+Consultar
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="contacto">
+
+<h2>Contacto</h2>
+
+<p>📷 Instagram: <strong>@kabymas</strong></p>
+
+<p>📱 WhatsApp: <strong>+54 9 3489 57-0499</strong></p>
+
+<p>
+✨ Seguinos para conocer novedades, promociones y nuevos ingresos.
+</p>
+
+</section>
+
+<footer>
+
+© 2026 KABYMÁS
+
+</footer>
+
+</body>
+</html>

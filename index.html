@@ -3,211 +3,189 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>KABYMÁS</title>
 
 <style>
 
-html {
-  scroll-behavior: smooth;
-}
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+html{
+scroll-behavior:smooth;
 }
 
 body{
-  font-family:Arial,sans-serif;
-  background:#f7f0ea;
-  color:#5f5755;
+font-family:Arial,sans-serif;
+margin:0;
+background:#f7f0ea;
+color:#5f5755;
 }
 
 header{
-  text-align:center;
-  padding:40px 20px;
+text-align:center;
+padding:30px;
 }
 
 .logo{
-  width:220px;
-  max-width:90%;
+width:220px;
 }
 
-.frase{
-  margin-top:15px;
-  font-size:18px;
-}
-
-.redes{
-  margin-top:20px;
-}
-
-.redes a{
-  display:block;
-  margin:8px 0;
-  color:#c0846b;
-  text-decoration:none;
-  font-weight:bold;
-}
-
-.separador{
-  width:120px;
-  height:3px;
-  background:#d6b4a2;
-  margin:25px auto;
+h1,h2,h3{
+text-align:center;
 }
 
 .promocion{
-  background:#d6b4a2;
-  color:white;
-  text-align:center;
-  padding:15px;
-  border-radius:10px;
-  max-width:900px;
-  margin:20px auto;
-  font-weight:bold;
+background:#d6b4a2;
+color:white;
+padding:15px;
+margin:20px;
+border-radius:10px;
+text-align:center;
+font-weight:bold;
 }
 
 .quienes{
-  max-width:900px;
-  margin:50px auto;
-  padding:0 20px;
-  text-align:center;
-  line-height:1.8;
+max-width:900px;
+margin:auto;
+padding:20px;
+text-align:center;
+line-height:1.7;
 }
 
 .categorias{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:15px;
-  padding:20px;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:10px;
+padding:20px;
 }
 
-.categoria{
-  background:white;
-  padding:12px 20px;
-  border-radius:25px;
-  text-decoration:none;
-  color:#5f5755;
-  box-shadow:0 2px 8px rgba(0,0,0,.1);
-  font-weight:bold;
+.categorias button{
+border:none;
+background:white;
+padding:10px 15px;
+border-radius:20px;
+cursor:pointer;
+font-weight:bold;
 }
 
-.categoria:hover{
-  background:#d6b4a2;
-  color:white;
+.categorias button:hover{
+background:#d6b4a2;
+color:white;
 }
 
-.titulo{
-  text-align:center;
-  margin-top:50px;
-  margin-bottom:20px;
-}
-
-.subtitulo{
-  margin-top:70px;
-  text-align:center;
-}
-
-.productos{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:25px;
-  max-width:1200px;
-  margin:auto;
-  padding:20px;
+#productos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+padding:20px;
+max-width:1200px;
+margin:auto;
 }
 
 .card{
-  background:white;
-  border-radius:15px;
-  box-shadow:0 5px 15px rgba(0,0,0,.08);
-  overflow:hidden;
-  text-align:center;
+background:white;
+border-radius:15px;
+box-shadow:0 3px 10px rgba(0,0,0,.1);
+padding:15px;
+text-align:center;
 }
 
 .card img{
-  width:220px;
-  height:220px;
-  object-fit:contain;
-  display:block;
-  margin:20px auto;
-}
-
-.info{
-  padding:20px;
-}
-
-.nombre{
-  font-size:20px;
-  font-weight:bold;
+width:220px;
+height:220px;
+object-fit:contain;
+display:block;
+margin:auto;
 }
 
 .precio{
-  font-size:26px;
-  color:#c0846b;
-  font-weight:bold;
-  margin-top:10px;
+font-size:24px;
+font-weight:bold;
+color:#c0846b;
 }
 
 .stock{
-  margin-top:10px;
+margin:10px 0;
 }
 
-.boton{
-  display:inline-block;
-  margin-top:15px;
-  padding:12px 20px;
-  background:#d6b4a2;
-  color:white;
-  text-decoration:none;
-  border-radius:8px;
+.btn{
+display:block;
+margin:8px auto;
+padding:10px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+text-decoration:none;
+width:90%;
+font-weight:bold;
+}
+
+.btn-whatsapp{
+background:#25D366;
+color:white;
+}
+
+.btn-mp{
+background:#009EE3;
+color:white;
+}
+
+.btn-carrito{
+background:#d6b4a2;
+color:white;
+}
+
+.carrito{
+position:fixed;
+top:15px;
+right:15px;
+background:white;
+padding:12px;
+border-radius:10px;
+box-shadow:0 2px 8px rgba(0,0,0,.2);
+font-weight:bold;
+z-index:999;
 }
 
 .contacto{
-  max-width:900px;
-  margin:60px auto;
-  text-align:center;
-  padding:20px;
-}
-
-.contacto p{
-  margin:10px 0;
+text-align:center;
+padding:40px;
 }
 
 footer{
-  text-align:center;
-  padding:40px;
-  color:#888;
+text-align:center;
+padding:30px;
+color:#888;
 }
 
 </style>
+
 </head>
 
 <body>
 
+<div class="carrito">
+🛒 Carrito: <span id="contador">0</span>
+</div>
+
 <header>
 
-<img src="logo.jpeg" class="logo" alt="KABYMÁS">
+<img src="logo.jpeg" class="logo">
 
-<p class="frase">
+<p>
 Estilo, practicidad y calidad para acompañarte todos los días.
 </p>
 
-<div class="redes">
-
+<p>
 <a href="https://instagram.com/kabymas" target="_blank">
 📷 Instagram @kabymas
 </a>
+</p>
 
+<p>
 <a href="https://wa.me/5493489570499" target="_blank">
-📱 WhatsApp +54 9 3489 57-0499
+📱 WhatsApp
 </a>
-
-</div>
-
-<div class="separador"></div>
+</p>
 
 </header>
 
@@ -220,217 +198,39 @@ Estilo, practicidad y calidad para acompañarte todos los días.
 <h2>Quiénes Somos</h2>
 
 <p>
-En KABYMÁS creemos que los mejores accesorios son aquellos que combinan estilo,
-practicidad y calidad. Seleccionamos productos pensados para acompañarte en tu
-día a día, brindándote variedad, funcionalidad y diseños para cada ocasión.
+En KABYMÁS creemos que los mejores accesorios son aquellos que combinan estilo, practicidad y calidad.
+Seleccionamos productos para acompañarte en cada momento del día.
 </p>
 
 </section>
 
-<section class="categorias">
+<h2>Colección KABYMÁS</h2>
 
-<a class="categoria" href="#bolsos">👜 Bolsos</a>
+<div class="categorias">
 
-<a class="categoria" href="#mochilas">🎒 Mochilas</a>
-
-<a class="categoria" href="#billeteras">👝 Billeteras</a>
-
-<a class="categoria" href="#accesorios">📱 Accesorios</a>
-
-<a class="categoria" href="#materas">🧉 Materas</a>
-
-<a class="categoria" href="#juguetes">🧸 Juguetes</a>
-
-</section>
-
-<h2 class="titulo">
-Colección KABYMÁS
-</h2>
-
-<h3 id="bolsos" class="subtitulo">👜 Bolsos</h3>
-
-<section class="productos">
-
-<div class="card">
-
-<img src="Producto 1.jpeg">
-
-<div class="info">
-
-<div class="nombre">
-Bolso Urbano Premium
-</div>
-
-<div class="precio">
-$39.900
-</div>
-
-<div class="stock">
-Stock: 4 unidades
-</div>
-
-<a class="boton"
-href="https://wa.me/5493489570499">
-Consultar
-</a>
+<button onclick="filtrar('todos')">Todos</button>
+<button onclick="filtrar('bolsos')">👜 Bolsos</button>
+<button onclick="filtrar('mochilas')">🎒 Mochilas</button>
+<button onclick="filtrar('billeteras')">👝 Billeteras</button>
+<button onclick="filtrar('accesorios')">📱 Accesorios</button>
+<button onclick="filtrar('materas')">🧉 Materas</button>
 
 </div>
 
-</div>
-
-</section>
-
-<h3 id="mochilas" class="subtitulo">🎒 Mochilas</h3>
-
-<section class="productos">
-
-<div class="card">
-
-<img src="Producto 2.jpeg">
-
-<div class="info">
-
-<div class="nombre">
-Mochila Ejecutiva
-</div>
-
-<div class="precio">
-$49.900
-</div>
-
-<div class="stock">
-Stock: 3 unidades
-</div>
-
-<a class="boton"
-href="https://wa.me/5493489570499">
-Consultar
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<h3 id="billeteras" class="subtitulo">👝 Billeteras y Riñoneras</h3>
-
-<section class="productos">
-
-<div class="card">
-
-<img src="Producto 3.jpeg">
-
-<div class="info">
-
-<div class="nombre">
-Billetera Porta Celular
-</div>
-
-<div class="precio">
-$24.900
-</div>
-
-<div class="stock">
-Stock: 6 unidades
-</div>
-
-<a class="boton"
-href="https://wa.me/5493489570499">
-Consultar
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<h3 id="accesorios" class="subtitulo">📱 Accesorios</h3>
-
-<section class="productos">
-
-<div class="card">
-
-<img src="Producto 4.jpeg">
-
-<div class="info">
-
-<div class="nombre">
-Porta Celular Premium
-</div>
-
-<div class="precio">
-$19.900
-</div>
-
-<div class="stock">
-Stock: 8 unidades
-</div>
-
-<a class="boton"
-href="https://wa.me/5493489570499">
-Consultar
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<h3 id="materas" class="subtitulo">🧉 Materas y Loncheras</h3>
-
-<p style="text-align:center;">
-Próximamente nuevos productos
-</p>
-
-<h3 id="juguetes" class="subtitulo">🧸 Juguetes</h3>
-
-<p style="text-align:center;">
-Próximamente nuevos productos
-</p>
+<div id="productos"></div>
 
 <section class="contacto">
 
 <h2>🚚 Envíos</h2>
 
-<p>
-Realizamos envíos a todo el país.
-</p>
-
-<p>
-Consultanos costos y tiempos de entrega según tu localidad.
-</p>
-
-</section>
-
-<section class="contacto">
+<p>Realizamos envíos a todo el país.</p>
 
 <h2>💳 Medios de Pago</h2>
 
 <p>✔ Efectivo</p>
-<p>✔ Transferencia Bancaria</p>
+<p>✔ Transferencia</p>
 <p>✔ Mercado Pago</p>
-<p>✔ Tarjetas de Crédito y Débito</p>
-
-</section>
-
-<section class="contacto">
-
-<h2>Contacto</h2>
-
-<p>
-📷 Instagram: @kabymas
-</p>
-
-<p>
-📱 WhatsApp: +54 9 3489 57-0499
-</p>
-
-<p>
-✨ Seguinos para conocer promociones y novedades.
-</p>
+<p>✔ Tarjetas</p>
 
 </section>
 
@@ -439,6 +239,89 @@ Consultanos costos y tiempos de entrega según tu localidad.
 © 2026 KABYMÁS
 
 </footer>
+
+<script>
+
+let productos = [];
+let carrito = [];
+let categoriaActual = "todos";
+
+fetch('productos.json')
+.then(response => response.json())
+.then(data => {
+productos = data;
+mostrarProductos();
+});
+
+function mostrarProductos(){
+
+const contenedor = document.getElementById("productos");
+
+contenedor.innerHTML = "";
+
+const filtrados = categoriaActual === "todos"
+? productos
+: productos.filter(p => p.categoria === categoriaActual);
+
+filtrados.forEach(producto => {
+
+contenedor.innerHTML += `
+<div class="card">
+
+<img src="${producto.imagen}" alt="${producto.nombre}">
+
+<h3>${producto.nombre}</h3>
+
+<div class="precio">
+$${producto.precio.toLocaleString()}
+</div>
+
+<div class="stock">
+Stock: ${producto.stock}
+</div>
+
+<a class="btn btn-whatsapp"
+href="https://wa.me/5493489570499?text=Hola%20me%20interesa%20${encodeURIComponent(producto.nombre)}"
+target="_blank">
+Consultar por WhatsApp
+</a>
+
+<a class="btn btn-mp"
+href="${producto.mercadopago}"
+target="_blank">
+Comprar Ahora
+</a>
+
+<button class="btn btn-carrito"
+onclick="agregarCarrito('${producto.nombre}',${producto.precio})">
+Agregar al carrito
+</button>
+
+</div>
+`;
+});
+
+}
+
+function filtrar(cat){
+categoriaActual = cat;
+mostrarProductos();
+}
+
+function agregarCarrito(nombre,precio){
+
+carrito.push({
+nombre,
+precio
+});
+
+document.getElementById("contador").innerText = carrito.length;
+
+console.log(carrito);
+
+}
+
+</script>
 
 </body>
 </html>

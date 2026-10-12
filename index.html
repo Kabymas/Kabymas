@@ -45,8 +45,17 @@ margin-top:20px;
 }
 
 .redes p{
-margin:6px 0;
-font-size:16px;
+margin:8px 0;
+}
+
+.redes a{
+color:#c0846b;
+font-weight:bold;
+text-decoration:none;
+}
+
+.redes a:hover{
+text-decoration:underline;
 }
 
 .separador{
@@ -119,247 +128,38 @@ margin-bottom:20px;
 .subtitulo{
 text-align:center;
 font-size:28px;
-margin-top:80px;
+margin-top:70px;
 margin-bottom:20px;
 }
 
-.productos{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
-padding:20px 40px;
-max-width:1200px;
-margin:auto;
-}
-
-.card{
-background:white;
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-}
-
-.card img{
-width:100%;
-height:350px;
-object-fit:cover;
-}
-
-.info{
-padding:20px;
-}
-
-.nombre{
-font-size:22px;
-font-weight:bold;
-margin-bottom:10px;
-}
-
-.precio{
-font-size:28px;
-font-weight:bold;
-color:#c0846b;
-margin-bottom:10px;
-}
-
-.stock{
-margin-bottom:20px;
-}
-
-.boton{
-display:block;
-background:#d6b4a2;
-color:white;
-text-decoration:none;
+.mensaje{
 text-align:center;
-padding:12px;
-border-radius:10px;
-font-weight:bold;
+color:#888;
+font-style:italic;
+padding-bottom:20px;
 }
 
 .contacto{
 max-width:900px;
 margin:60px auto;
-padding:20px;
+padding:25px;
 text-align:center;
 }
 
 .contacto p{
-margin:10px 0;
+margin:12px 0;
+}
+
+.contacto a{
+color:#c0846b;
+font-weight:bold;
+text-decoration:none;
+}
+
+.contacto a:hover{
+text-decoration:underline;
 }
 
 footer{
 padding:40px;
-text-align:center;
-color:#777;
-}
-
-.mensaje{
-text-align:center;
-padding:15px;
-color:#888;
-font-style:italic;
-}
-
-</style>
-
-</head>
-
-<body>
-
-<header>
-
-<img src="logo.jpeg" alt="KABYMÁS">
-
-<p class="frase">
-Estilo, practicidad y calidad para acompañarte todos los días.
-</p>
-
-<div class="redes">
-
-<p>📷 Instagram: <strong>@kabymas</strong></p>
-
-<p>📱 WhatsApp: <strong>+54 9 3489 57-0499</strong></p>
-
-</div>
-
-<div class="separador"></div>
-
-</header>
-
-<div class="promocion">
-💸 10% OFF abonando en efectivo en productos seleccionados
-</div>
-
-<section class="quienes">
-
-<h2>Quiénes Somos</h2>
-
-<p>
-En KABYMÁS creemos que los mejores accesorios son aquellos que combinan estilo, practicidad y calidad.
-Trabajamos para acercarte productos seleccionados con dedicación, pensados para acompañarte en cada momento y adaptarse a distintas necesidades y estilos de vida.
-</p>
-
-</section>
-
-<section class="categorias">
-
-<a class="categoria" href="#bolsos">👜 Bolsos y Carteras</a>
-
-<a class="categoria" href="#mochilas">🎒 Mochilas y Porta Notebook</a>
-
-<a class="categoria" href="#billeteras">👝 Billeteras y Riñoneras</a>
-
-<a class="categoria" href="#accesorios">📱 Porta Celulares y Accesorios</a>
-
-<a class="categoria" href="#materas">🧉 Materas y Loncheras</a>
-
-<a class="categoria" href="#deportes">🏃 Deportes y Aire Libre</a>
-
-<a class="categoria" href="#juguetes">🧸 Juguetes</a>
-
-<a class="categoria" href="#otros">☂️ Otros Complementos</a>
-
-</section>
-
-<h2 class="titulo">
-Colección KABYMÁS
-</h2>
-
-<h3 id="bolsos" class="subtitulo">👜 Bolsos y Carteras</h3>
-
-<div class="mensaje">
-Próximamente nuevos productos.
-</div>
-
-<h3 id="mochilas" class="subtitulo">🎒 Mochilas y Porta Notebook</h3>
-
-<div class="mensaje">
-Próximamente nuevos productos.
-</div>
-
-<h3 id="billeteras" class="subtitulo">👝 Billeteras y Riñoneras</h3>
-
-<div class="mensaje">
-Próximamente nuevos productos.
-</div>
-
-<h3 id="accesorios" class="subtitulo">📱 Porta Celulares y Accesorios</h3>
-
-<section class="productos">
-
-<div class="card">
-
-<img src="Producto 1.jpeg" alt="Producto">
-
-<div class="info">
-
-<div class="nombre">
-Producto de ejemplo
-</div>
-
-<div class="precio">
-$ 0
-</div>
-
-<div class="stock">
-Stock disponible
-</div>
-
-<a class="boton" href="https://wa.me/5493489570499">
-Consultar
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<h3 id="materas" class="subtitulo">🧉 Materas y Loncheras</h3>
-
-<div class="mensaje">
-Próximamente nuevos productos.
-</div>
-
-<h3 id="deportes" class="subtitulo">🏃 Deportes y Aire Libre</h3>
-
-<div class="mensaje">
-Próximamente nuevos productos.
-</div>
-
-<h3 id="juguetes" class="subtitulo">🧸 Juguetes</h3>
-
-<div class="mensaje">
-Próximamente nuevos productos.
-</div>
-
-<h3 id="otros" class="subtitulo">☂️ Otros Complementos</h3>
-
-<div class="mensaje">
-Próximamente nuevos productos.
-</div>
-
-<section class="contacto">
-
-<h2>Contacto</h2>
-
-<p>📷 Instagram: <strong>@kabymas</strong></p>
-
-<p>📱 WhatsApp: <strong>+54 9 3489 57-0499</strong></p>
-
-<p>
-✨ Seguinos para conocer promociones, nuevos ingresos y novedades.
-</p>
-
-</section>
-
-<footer>
-
-© 2026 KABYMÁS
-
-</footer>
-
-</body>
-
-</html>
+text-align

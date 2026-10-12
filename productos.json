@@ -1,34 +1,34 @@
 [
   {
-    "categoria": "bolsos",
-    "nombre": "Bolso Urbano Premium",
-    "precio": 39900,
-    "stock": 4,
-    "imagen": "Producto 1.jpeg",
-    "mercadopago": "#"
+    "categoria":"bolsos",
+    "nombre":"Bolso Urbano Premium",
+    "precio":39900,
+    "stock":4,
+    "imagen":"Producto 1.jpeg",
+    "mercadopago":"#"
   },
   {
-    "categoria": "mochilas",
-    "nombre": "Mochila Ejecutiva",
-    "precio": 49900,
-    "stock": 3,
-    "imagen": "Producto 2.jpeg",
-    "mercadopago": "#"
+    "categoria":"mochilas",
+    "nombre":"Mochila Ejecutiva",
+    "precio":49900,
+    "stock":3,
+    "imagen":"Producto 2.jpeg",
+    "mercadopago":"#"
   },
   {
-    "categoria": "billeteras",
-    "nombre": "Billetera Porta Celular",
-    "precio": 24900,
-    "stock": 6,
-    "imagen": "Producto 3.jpeg",
-    "mercadopago": "#"
+    "categoria":"billeteras",
+    "nombre":"Billetera Porta Celular",
+    "precio":24900,
+    "stock":6,
+    "imagen":"Producto 3.jpeg",
+    "mercadopago":"#"
   },
   {
-    "categoria": "accesorios",
-    "nombre": "Porta Celular Premium",
-    "precio": 19900,
-    "stock": 8,
-    "imagen": "Producto 4.jpeg",
-    "mercadopago": "#"
+    "categoria":"accesorios",
+    "nombre":"Porta Celular Premium",
+    "precio":19900,
+    "stock":8,
+    "imagen":"Producto 4.jpeg",
+    "mercadopago":"#"
   }
 ]

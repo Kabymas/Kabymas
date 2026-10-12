@@ -1,0 +1,30 @@
+[
+  {
+    "categoria": "bolsos",
+    "nombre": "Bolso Urbano Premium",
+    "precio": "$39.900",
+    "stock": "4 unidades",
+    "imagen": "Producto 1.jpeg"
+  },
+  {
+    "categoria": "mochilas",
+    "nombre": "Mochila Ejecutiva",
+    "precio": "$49.900",
+    "stock": "3 unidades",
+    "imagen": "Producto 2.jpeg"
+  },
+  {
+    "categoria": "billeteras",
+    "nombre": "Billetera Porta Celular",
+    "precio": "$24.900",
+    "stock": "6 unidades",
+    "imagen": "Producto 3.jpeg"
+  },
+  {
+    "categoria": "accesorios",
+    "nombre": "Porta Celular Premium",
+    "precio": "$19.900",
+    "stock": "8 unidades",
+    "imagen": "Producto 4.jpeg"
+  }
+]

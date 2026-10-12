@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
 <meta charset="UTF-8">
@@ -13,6 +14,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
 body{
@@ -47,7 +49,7 @@ margin:30px auto;
 background:#d6b4a2;
 color:white;
 padding:15px;
-max-width:750px;
+max-width:700px;
 margin:20px auto;
 border-radius:12px;
 font-weight:bold;
@@ -85,18 +87,27 @@ background:white;
 padding:12px 22px;
 border-radius:30px;
 box-shadow:0 2px 8px rgba(0,0,0,.08);
+text-decoration:none;
+color:#5f5755;
+font-weight:600;
+transition:.3s;
+}
+
+.categoria:hover{
+background:#d6b4a2;
+color:white;
 }
 
 .titulo{
 text-align:center;
-font-size:36px;
+font-size:34px;
 margin-top:40px;
 margin-bottom:25px;
 }
 
 .productos{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:25px;
 padding:40px;
 max-width:1200px;
@@ -127,9 +138,9 @@ margin-bottom:10px;
 }
 
 .precio{
-font-size:30px;
-font-weight:bold;
+font-size:28px;
 color:#c0846b;
+font-weight:bold;
 margin-bottom:10px;
 }
 
@@ -155,13 +166,8 @@ padding:30px;
 text-align:center;
 }
 
-.contacto h2{
-margin-bottom:20px;
-}
-
 .contacto p{
 margin:10px 0;
-line-height:1.8;
 }
 
 footer{
@@ -199,123 +205,31 @@ Estilo, practicidad y calidad para acompañarte todos los días.
 <h2>Quiénes Somos</h2>
 
 <p>
-
 En KABYMÁS creemos que los mejores accesorios son aquellos que combinan estilo,
 practicidad y calidad. Trabajamos para acercarte productos seleccionados con dedicación,
 pensados para acompañarte en el día a día y adaptarse a distintos momentos y necesidades.
-
 </p>
 
 </section>
 
 <section class="categorias">
 
-<div class="categoria">👜 Bolsos y Carteras</div>
+<a href="#catalogo" class="categoria">👜 Bolsos y Carteras</a>
 
-<div class="categoria">🎒 Mochilas y Porta Notebook</div>
+<a href="#catalogo" class="categoria">🎒 Mochilas y Porta Notebook</a>
 
-<div class="categoria">👝 Billeteras y Riñoneras</div>
+<a href="#catalogo" class="categoria">👝 Billeteras y Riñoneras</a>
 
-<div class="categoria">📱 Porta Celulares y Accesorios</div>
+<a href="#catalogo" class="categoria">📱 Porta Celulares y Accesorios</a>
 
-<div class="categoria">🧉 Materas y Loncheras</div>
+<a href="#catalogo" class="categoria">🧉 Materas y Loncheras</a>
 
-<div class="categoria">🏃 Deportes y Aire Libre</div>
+<a href="#catalogo" class="categoria">🏃 Deportes y Aire Libre</a>
 
-<div class="categoria">🧸 Juguetes</div>
+<a href="#catalogo" class="categoria">🧸 Juguetes</a>
 
-<div class="categoria">☂️ Otros Complementos</div>
-
-</section>
-
-<h2 class="titulo">
-Colección KABYMÁS
-</h2>
-
-<section class="productos">
-
-<div class="card">
-
-<img src="Producto 1.jpeg" alt="Producto">
-
-<div class="info">
-
-<div class="nombre">
-Nombre del Producto
-</div>
-
-<div class="precio">
-$ 0
-</div>
-
-<div class="stock">
-Stock disponible
-</div>
-
-<a class="boton" href="https://wa.me/5493489570499" target="_blank">
-Consultar
-</a>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="Producto 2.jpeg" alt="Producto">
-
-<div class="info">
-
-<div class="nombre">
-Nombre del Producto
-</div>
-
-<div class="precio">
-$ 0
-</div>
-
-<div class="stock">
-Stock disponible
-</div>
-
-<a class="boton" href="https://wa.me/5493489570499" target="_blank">
-Consultar
-</a>
-
-</div>
-
-</div>
+<a href="#catalogo" class="categoria">☂️ Otros Complementos</a>
 
 </section>
 
-<section class="contacto">
-
-<h2>Contacto</h2>
-
-<p>
-📷 Instagram: <strong>@kabymas</strong>
-</p>
-
-<p>
-📱 WhatsApp: <strong>+54 9 3489 57-0499</strong>
-</p>
-
-<p>
-Atención personalizada para ayudarte a encontrar el producto ideal.
-</p>
-
-<p>
-✨ Seguinos en Instagram para conocer novedades, promociones y nuevos ingresos.
-</p>
-
-</section>
-
-<footer>
-
-© 2026 KABYMÁS
-
-</footer>
-
-</body>
-
-</html>
+<h2 id="catalogo"

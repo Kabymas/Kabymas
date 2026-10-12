@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>KABYMÁS</title>
 
 <style>
@@ -29,7 +30,7 @@ padding:40px 20px;
 }
 
 header img{
-max-width:320px;
+max-width:250px;
 width:90%;
 }
 
@@ -43,13 +44,13 @@ margin-top:20px;
 }
 
 .redes p{
-margin:8px 0;
+margin:10px 0;
 }
 
 a{
 color:#c0846b;
-text-decoration:none;
 font-weight:bold;
+text-decoration:none;
 }
 
 a:hover{
@@ -67,7 +68,7 @@ margin:25px auto;
 background:#d6b4a2;
 color:white;
 padding:15px;
-max-width:800px;
+max-width:900px;
 margin:20px auto;
 border-radius:12px;
 text-align:center;
@@ -93,22 +94,19 @@ font-size:18px;
 .categorias{
 display:flex;
 justify-content:center;
-gap:15px;
 flex-wrap:wrap;
-padding:20px;
+gap:15px;
 max-width:1200px;
 margin:auto;
+padding:20px;
 }
 
 .categoria{
 background:white;
-padding:12px 22px;
+padding:12px 20px;
 border-radius:30px;
-text-decoration:none;
-color:#5f5755;
-font-weight:bold;
 box-shadow:0 2px 8px rgba(0,0,0,.08);
-transition:.3s;
+transition:0.3s;
 }
 
 .categoria:hover{
@@ -116,51 +114,104 @@ background:#d6b4a2;
 color:white;
 }
 
+.categoria:hover a{
+color:white;
+text-decoration:none;
+}
+
 .titulo{
 text-align:center;
-font-size:34px;
-margin-top:50px;
-margin-bottom:20px;
+font-size:38px;
+margin-top:60px;
 }
 
 .subtitulo{
 text-align:center;
-font-size:28px;
-margin-top:70px;
-margin-bottom:20px;
+margin-top:80px;
+font-size:30px;
 }
 
 .mensaje{
 text-align:center;
-padding-bottom:30px;
 color:#888;
 font-style:italic;
+margin-top:10px;
 }
 
-section{
-padding-left:20px;
-padding-right:20px;
+.productos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+max-width:1200px;
+margin:30px auto;
+padding:20px;
+}
+
+.card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.card img{
+width:100%;
+height:280px;
+object-fit:cover;
+}
+
+.info{
+padding:20px;
+}
+
+.nombre{
+font-size:22px;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.precio{
+font-size:28px;
+font-weight:bold;
+color:#c0846b;
+margin-bottom:10px;
+}
+
+.stock{
+margin-bottom:15px;
+}
+
+.boton{
+display:block;
+background:#d6b4a2;
+color:white;
+text-align:center;
+padding:12px;
+border-radius:10px;
+text-decoration:none;
 }
 
 .contacto{
 max-width:900px;
 margin:60px auto;
 text-align:center;
+padding:20px;
 }
 
 .contacto p{
-margin:12px 0;
+margin:10px 0;
 }
 
 footer{
-padding:40px;
 text-align:center;
+padding:40px;
 color:#777;
 }
 
 </style>
 
 </head>
+
 <body>
 
 <header>
@@ -210,178 +261,5 @@ Trabajamos para acercarte productos seleccionados con dedicación, pensados para
 
 <section class="categorias">
 
-<a class="categoria" href="#bolsos">👜 Bolsos y Carteras</a>
-
-<a class="categoria" href="#mochilas">🎒 Mochilas y Porta Notebook</a>
-
-<a class="categoria" href="#billeteras">👝 Billeteras y Riñoneras</a>
-
-<a class="categoria" href="#accesorios">📱 Porta Celulares y Accesorios</a>
-
-<a class="categoria" href="#materas">🧉 Materas y Loncheras</a>
-
-<a class="categoria" href="#deportes">🏃 Deportes y Aire Libre</a>
-
-<a class="categoria" href="#juguetes">🧸 Juguetes</a>
-
-<a class="categoria" href="#otros">☂️ Otros Complementos</a>
-
-</section>
-
-<h2 class="titulo">
-Colección KABYMÁS
-</h2>
-
-<h3 id="bolsos" class="subtitulo">
-👜 Bolsos y Carteras
-</h3>
-
-<p class="mensaje">
-Próximamente nuevos productos
-</p>
-
-<h3 id="mochilas" class="subtitulo">
-🎒 Mochilas y Porta Notebook
-</h3>
-
-<p class="mensaje">
-Próximamente nuevos productos
-</p>
-
-<h3 id="billeteras" class="subtitulo">
-👝 Billeteras y Riñoneras
-</h3>
-
-<p class="mensaje">
-Próximamente nuevos productos
-</p>
-
-<h3 id="accesorios" class="subtitulo">
-📱 Porta Celulares y Accesorios
-</h3>
-
-<p class="mensaje">
-Próximamente nuevos productos
-</p>
-
-<h3 id="materas" class="subtitulo">
-🧉 Materas y Loncheras
-</h3>
-
-<p class="mensaje">
-<section class="productos">
-
-<div class="card">
-
-<img src="Producto 1.jpeg" alt="Matera Premium">
-
-<div class="info">
-
-<div class="nombre">
-Matera Premium
-</div>
-
-<div class="precio">
-$ 29.900
-</div>
-
-<div class="stock">
-Stock: 5 unidades
-</div>
-
-<a class="boton"
-href="https://wa.me/5493489570499"
-target="_blank">
-
-Consultar
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-</p>
-
-<h3 id="deportes" class="subtitulo">
-🏃 Deportes y Aire Libre
-</h3>
-
-<p class="mensaje">
-Próximamente nuevos productos
-</p>
-
-<h3 id="juguetes" class="subtitulo">
-🧸 Juguetes
-</h3>
-
-<p class="mensaje">
-Próximamente nuevos productos
-</p>
-
-<h3 id="otros" class="subtitulo">
-☂️ Otros Complementos
-</h3>
-
-<p class="mensaje">
-Próximamente nuevos productos
-</p>
-
-<section class="contacto">
-
-<h2>🚚 Envíos</h2>
-
-<p>
-Realizamos envíos a todo el país.
-</p>
-
-<p>
-Consultanos costos y tiempos de entrega según tu localidad.
-</p>
-
-</section>
-
-<section class="contacto">
-
-<h2>💳 Medios de Pago</h2>
-
-<p>✔ Efectivo</p>
-<p>✔ Transferencia Bancaria</p>
-<p>✔ Mercado Pago</p>
-<p>✔ Tarjetas de Crédito y Débito</p>
-
-</section>
-
-<section class="contacto">
-
-<h2>Contacto</h2>
-
-<p>
-📷
-<a href="https://instagram.com/kabymas" target="_blank">
-@kabymas
-</a>
-</p>
-
-<p>
-📱
-<a href="https://wa.me/5493489570499" target="_blank">
-+54 9 3489 57-0499
-</a>
-</p>
-
-<p>
-✨ Seguinos para conocer promociones, novedades y nuevos ingresos.
-</p>
-
-</section>
-
-<footer>
-
-© 2026 KABYMÁS
-
-</footer>
-
-</body>
-</html>
+<div class="categoria">
+<a href="#bolsos">👜 

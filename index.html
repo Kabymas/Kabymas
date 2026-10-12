@@ -12,9 +12,14 @@ html{
 scroll-behavior:smooth;
 }
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
 font-family:Arial,sans-serif;
-margin:0;
 background:#f7f0ea;
 color:#5f5755;
 }
@@ -26,10 +31,6 @@ padding:30px;
 
 .logo{
 width:220px;
-}
-
-h1,h2,h3{
-text-align:center;
 }
 
 .promocion{
@@ -143,7 +144,8 @@ padding:12px;
 border-radius:10px;
 box-shadow:0 2px 8px rgba(0,0,0,.2);
 font-weight:bold;
-z-index:999;
+cursor:pointer;
+z-index:1000;
 }
 
 .contacto{
@@ -157,13 +159,42 @@ padding:30px;
 color:#888;
 }
 
-</style>
+/* MODAL CARRITO */
 
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.5);
+z-index:2000;
+}
+
+.modal-content{
+background:white;
+width:90%;
+max-width:500px;
+margin:40px auto;
+padding:20px;
+border-radius:15px;
+max-height:80vh;
+overflow:auto;
+}
+
+.control{
+padding:5px 10px;
+margin:3px;
+cursor:pointer;
+}
+
+</style>
 </head>
 
 <body>
 
-<div class="carrito">
+<div class="carrito" onclick="abrirCarrito()">
 🛒 Carrito: <span id="contador">0</span>
 </div>
 
@@ -204,7 +235,9 @@ Seleccionamos productos para acompañarte en cada momento del día.
 
 </section>
 
-<h2>Colección KABYMÁS</h2>
+<h2 style="text-align:center;">
+Colección KABYMÁS
+</h2>
 
 <div class="categorias">
 
@@ -213,7 +246,6 @@ Seleccionamos productos para acompañarte en cada momento del día.
 <button onclick="filtrar('mochilas')">🎒 Mochilas</button>
 <button onclick="filtrar('billeteras')">👝 Billeteras</button>
 <button onclick="filtrar('accesorios')">📱 Accesorios</button>
-<button onclick="filtrar('materas')">🧉 Materas</button>
 
 </div>
 
@@ -235,10 +267,42 @@ Seleccionamos productos para acompañarte en cada momento del día.
 </section>
 
 <footer>
-
 © 2026 KABYMÁS
-
 </footer>
+
+<!-- MODAL -->
+
+<div id="modalCarrito" class="modal">
+
+<div class="modal-content">
+
+<h2>🛒 Mi Carrito</h2>
+
+<div id="contenidoCarrito"></div>
+
+<hr>
+
+<h3 id="totalCarrito">
+Total: $0
+</h3>
+
+<br>
+
+<button
+class="btn btn-whatsapp"
+onclick="enviarWhatsApp()">
+Finalizar Pedido por WhatsApp
+</button>
+
+<button
+class="btn btn-mp"
+onclick="cerrarCarrito()">
+Cerrar
+</button>
+
+</div>
+
+</div>
 
 <script>
 
@@ -246,29 +310,33 @@ let productos = [];
 let carrito = [];
 let categoriaActual = "todos";
 
-fetch('productos.json')
-.then(response => response.json())
-.then(data => {
+fetch("productos.json")
+.then(r=>r.json())
+.then(data=>{
 productos = data;
 mostrarProductos();
 });
 
 function mostrarProductos(){
 
-const contenedor = document.getElementById("productos");
+const contenedor =
+document.getElementById("productos");
 
 contenedor.innerHTML = "";
 
-const filtrados = categoriaActual === "todos"
+const lista =
+categoriaActual === "todos"
 ? productos
-: productos.filter(p => p.categoria === categoriaActual);
+: productos.filter(
+p=>p.categoria === categoriaActual
+);
 
-filtrados.forEach(producto => {
+lista.forEach(producto=>{
 
 contenedor.innerHTML += `
 <div class="card">
 
-<img src="${producto.imagen}" alt="${producto.nombre}">
+<img src="${producto.imagen}">
 
 <h3>${producto.nombre}</h3>
 
@@ -281,15 +349,15 @@ Stock: ${producto.stock}
 </div>
 
 <a class="btn btn-whatsapp"
-href="https://wa.me/5493489570499?text=Hola%20me%20interesa%20${encodeURIComponent(producto.nombre)}"
-target="_blank">
-Consultar por WhatsApp
+target="_blank"
+href="https://wa.me/5493489570499?text=Hola me interesa ${encodeURIComponent(producto.nombre)}">
+Consultar
 </a>
 
 <a class="btn btn-mp"
-href="${producto.mercadopago}"
-target="_blank">
-Comprar Ahora
+target="_blank"
+href="${producto.mercadopago}">
+Comprar
 </a>
 
 <button class="btn btn-carrito"
@@ -299,25 +367,195 @@ Agregar al carrito
 
 </div>
 `;
+
 });
 
 }
 
 function filtrar(cat){
+
 categoriaActual = cat;
+
 mostrarProductos();
+
 }
 
 function agregarCarrito(nombre,precio){
 
+const existe =
+carrito.find(
+item=>item.nombre===nombre
+);
+
+if(existe){
+
+existe.cantidad++;
+
+}else{
+
 carrito.push({
-nombre,
-precio
+nombre:nombre,
+precio:precio,
+cantidad:1
 });
 
-document.getElementById("contador").innerText = carrito.length;
+}
 
-console.log(carrito);
+actualizarContador();
+
+}
+
+function actualizarContador(){
+
+let total = 0;
+
+carrito.forEach(item=>{
+
+total += item.cantidad;
+
+});
+
+document.getElementById("contador").innerText =
+total;
+
+}
+
+function abrirCarrito(){
+
+const contenedor =
+document.getElementById("contenidoCarrito");
+
+let total = 0;
+
+contenedor.innerHTML = "";
+
+if(carrito.length===0){
+
+contenedor.innerHTML =
+"<p>El carrito está vacío</p>";
+
+}else{
+
+carrito.forEach((item,index)=>{
+
+const subtotal =
+item.precio * item.cantidad;
+
+total += subtotal;
+
+contenedor.innerHTML += `
+<div>
+
+<strong>${item.nombre}</strong>
+
+<br>
+
+Cantidad:
+${item.cantidad}
+
+<br>
+
+Subtotal:
+$${subtotal.toLocaleString()}
+
+<br>
+
+<button class="control"
+onclick="sumar(${index})">
++
+</button>
+
+<button class="control"
+onclick="restar(${index})">
+-
+</button>
+
+<hr>
+
+</div>
+`;
+
+});
+
+}
+
+document.getElementById("totalCarrito").innerHTML =
+`Total: $${total.toLocaleString()}`;
+
+document.getElementById("modalCarrito").style.display =
+"block";
+
+}
+
+function cerrarCarrito(){
+
+document.getElementById(
+"modalCarrito"
+).style.display = "none";
+
+}
+
+function sumar(i){
+
+carrito[i].cantidad++;
+
+actualizarContador();
+
+abrirCarrito();
+
+}
+
+function restar(i){
+
+carrito[i].cantidad--;
+
+if(carrito[i].cantidad<=0){
+
+carrito.splice(i,1);
+
+}
+
+actualizarContador();
+
+abrirCarrito();
+
+}
+
+function enviarWhatsApp(){
+
+if(carrito.length===0){
+
+alert("El carrito está vacío");
+
+return;
+
+}
+
+let mensaje =
+"Hola KABYMÁS.%0A%0A";
+
+mensaje +=
+"Quiero realizar el siguiente pedido:%0A%0A";
+
+let total = 0;
+
+carrito.forEach(item=>{
+
+mensaje +=
+`• ${item.nombre} x${item.cantidad}%0A`;
+
+total +=
+item.precio * item.cantidad;
+
+});
+
+mensaje +=
+`%0ATotal estimado: $${total.toLocaleString()}`;
+
+window.open(
+`https://wa.me/5493489570499?text=${mensaje}`,
+"_blank"
+);
 
 }
 

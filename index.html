@@ -3,212 +3,193 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>KABYMÁS</title>
 
 <style>
 
-html{
-scroll-behavior:smooth;
+html {
+  scroll-behavior: smooth;
 }
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 body{
-font-family:Arial,sans-serif;
-background:#f7f0ea;
-color:#5f5755;
+  font-family:Arial,sans-serif;
+  background:#f7f0ea;
+  color:#5f5755;
 }
 
 header{
-text-align:center;
-padding:40px 20px;
+  text-align:center;
+  padding:40px 20px;
 }
 
 .logo{
-max-width:250px;
-width:90%;
+  width:220px;
+  max-width:90%;
 }
 
 .frase{
-margin-top:20px;
-font-size:18px;
+  margin-top:15px;
+  font-size:18px;
 }
 
 .redes{
-margin-top:20px;
+  margin-top:20px;
 }
 
 .redes a{
-display:block;
-margin:8px 0;
-color:#c0846b;
-font-weight:bold;
-text-decoration:none;
-}
-
-.redes a:hover{
-text-decoration:underline;
+  display:block;
+  margin:8px 0;
+  color:#c0846b;
+  text-decoration:none;
+  font-weight:bold;
 }
 
 .separador{
-width:120px;
-height:3px;
-background:#d6b4a2;
-margin:25px auto;
+  width:120px;
+  height:3px;
+  background:#d6b4a2;
+  margin:25px auto;
 }
 
 .promocion{
-background:#d6b4a2;
-color:white;
-padding:15px;
-margin:20px;
-border-radius:12px;
-text-align:center;
-font-weight:bold;
+  background:#d6b4a2;
+  color:white;
+  text-align:center;
+  padding:15px;
+  border-radius:10px;
+  max-width:900px;
+  margin:20px auto;
+  font-weight:bold;
 }
 
 .quienes{
-max-width:900px;
-margin:50px auto;
-padding:0 20px;
-text-align:center;
-}
-
-.quienes h2{
-margin-bottom:20px;
-}
-
-.quienes p{
-line-height:1.8;
+  max-width:900px;
+  margin:50px auto;
+  padding:0 20px;
+  text-align:center;
+  line-height:1.8;
 }
 
 .categorias{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:15px;
-padding:20px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:15px;
+  padding:20px;
 }
 
 .categoria{
-background:white;
-padding:12px 18px;
-border-radius:30px;
-box-shadow:0 2px 8px rgba(0,0,0,.08);
-text-decoration:none;
-color:#5f5755;
-font-weight:bold;
+  background:white;
+  padding:12px 20px;
+  border-radius:25px;
+  text-decoration:none;
+  color:#5f5755;
+  box-shadow:0 2px 8px rgba(0,0,0,.1);
+  font-weight:bold;
 }
 
 .categoria:hover{
-background:#d6b4a2;
-color:white;
+  background:#d6b4a2;
+  color:white;
 }
 
 .titulo{
-text-align:center;
-font-size:36px;
-margin-top:60px;
+  text-align:center;
+  margin-top:50px;
+  margin-bottom:20px;
 }
 
 .subtitulo{
-text-align:center;
-font-size:28px;
-margin-top:80px;
-margin-bottom:20px;
-}
-
-.mensaje{
-text-align:center;
-color:#888;
-font-style:italic;
+  margin-top:70px;
+  text-align:center;
 }
 
 .productos{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-max-width:1200px;
-margin:30px auto;
-padding:20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+  max-width:1200px;
+  margin:auto;
+  padding:20px;
 }
 
 .card{
-background:white;
-border-radius:20px;
-padding:20px;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-text-align:center;
+  background:white;
+  border-radius:15px;
+  box-shadow:0 5px 15px rgba(0,0,0,.08);
+  overflow:hidden;
+  text-align:center;
 }
 
-/* IMAGENES PEQUEÑAS Y PROLIJAS */
-
 .card img{
-width:220px;
-height:220px;
-object-fit:contain;
-display:block;
-margin:auto;
+  width:220px;
+  height:220px;
+  object-fit:contain;
+  display:block;
+  margin:20px auto;
+}
+
+.info{
+  padding:20px;
 }
 
 .nombre{
-font-size:22px;
-font-weight:bold;
-margin-top:15px;
+  font-size:20px;
+  font-weight:bold;
 }
 
 .precio{
-font-size:28px;
-font-weight:bold;
-color:#c0846b;
-margin-top:10px;
+  font-size:26px;
+  color:#c0846b;
+  font-weight:bold;
+  margin-top:10px;
 }
 
 .stock{
-margin-top:10px;
-margin-bottom:15px;
+  margin-top:10px;
 }
 
 .boton{
-display:inline-block;
-background:#d6b4a2;
-color:white;
-padding:12px 20px;
-border-radius:8px;
-text-decoration:none;
+  display:inline-block;
+  margin-top:15px;
+  padding:12px 20px;
+  background:#d6b4a2;
+  color:white;
+  text-decoration:none;
+  border-radius:8px;
 }
 
 .contacto{
-max-width:900px;
-margin:60px auto;
-padding:20px;
-text-align:center;
+  max-width:900px;
+  margin:60px auto;
+  text-align:center;
+  padding:20px;
 }
 
 .contacto p{
-margin:10px 0;
+  margin:10px 0;
 }
 
 footer{
-text-align:center;
-padding:40px;
-color:#777;
+  text-align:center;
+  padding:40px;
+  color:#888;
 }
 
 </style>
-
 </head>
 
 <body>
 
 <header>
 
-<img src="logo.jpeg" alt="KABYMÁS" class="logo">
+<img src="logo.jpeg" class="logo" alt="KABYMÁS">
 
 <p class="frase">
 Estilo, practicidad y calidad para acompañarte todos los días.
@@ -217,11 +198,11 @@ Estilo, practicidad y calidad para acompañarte todos los días.
 <div class="redes">
 
 <a href="https://instagram.com/kabymas" target="_blank">
-📷 Instagram: @kabymas
+📷 Instagram @kabymas
 </a>
 
 <a href="https://wa.me/5493489570499" target="_blank">
-📱 WhatsApp: +54 9 3489 57-0499
+📱 WhatsApp +54 9 3489 57-0499
 </a>
 
 </div>
@@ -239,30 +220,26 @@ Estilo, practicidad y calidad para acompañarte todos los días.
 <h2>Quiénes Somos</h2>
 
 <p>
-En KABYMÁS creemos que los mejores accesorios son aquellos que combinan
-estilo, practicidad y calidad. Trabajamos para acercarte productos
-seleccionados con dedicación para acompañarte en cada momento.
+En KABYMÁS creemos que los mejores accesorios son aquellos que combinan estilo,
+practicidad y calidad. Seleccionamos productos pensados para acompañarte en tu
+día a día, brindándote variedad, funcionalidad y diseños para cada ocasión.
 </p>
 
 </section>
 
 <section class="categorias">
 
-<a class="categoria" href="#bolsos">👜 Bolsos y Carteras</a>
+<a class="categoria" href="#bolsos">👜 Bolsos</a>
 
-<a class="categoria" href="#mochilas">🎒 Mochilas y Porta Notebook</a>
+<a class="categoria" href="#mochilas">🎒 Mochilas</a>
 
-<a class="categoria" href="#billeteras">👝 Billeteras y Riñoneras</a>
+<a class="categoria" href="#billeteras">👝 Billeteras</a>
 
 <a class="categoria" href="#accesorios">📱 Accesorios</a>
 
-<a class="categoria" href="#materas">🧉 Materas y Loncheras</a>
-
-<a class="categoria" href="#deportes">🏃 Deportes y Aire Libre</a>
+<a class="categoria" href="#materas">🧉 Materas</a>
 
 <a class="categoria" href="#juguetes">🧸 Juguetes</a>
-
-<a class="categoria" href="#otros">☂️ Otros Complementos</a>
 
 </section>
 
@@ -270,47 +247,198 @@ seleccionados con dedicación para acompañarte en cada momento.
 Colección KABYMÁS
 </h2>
 
-<h3 id="bolsos" class="subtitulo">👜 Bolsos y Carteras</h3>
-<p class="mensaje">Próximamente nuevos productos</p>
-
-<h3 id="mochilas" class="subtitulo">🎒 Mochilas y Porta Notebook</h3>
-<p class="mensaje">Próximamente nuevos productos</p>
-
-<h3 id="billeteras" class="subtitulo">👝 Billeteras y Riñoneras</h3>
-<p class="mensaje">Próximamente nuevos productos</p>
-
-<h3 id="accesorios" class="subtitulo">📱 Porta Celulares y Accesorios</h3>
+<h3 id="bolsos" class="subtitulo">👜 Bolsos</h3>
 
 <section class="productos">
 
 <div class="card">
 
-<img src="Producto 1.jpeg" alt="Producto">
+<img src="Producto 1.jpeg">
+
+<div class="info">
 
 <div class="nombre">
-Producto de Ejemplo
+Bolso Urbano Premium
 </div>
 
 <div class="precio">
-$29.900
+$39.900
 </div>
 
 <div class="stock">
-Stock: 5 unidades
+Stock: 4 unidades
 </div>
 
-<a class="boton" href="https://wa.me/5493489570499" target="_blank">
+<a class="boton"
+href="https://wa.me/5493489570499">
 Consultar
 </a>
+
+</div>
+
+</div>
+
+</section>
+
+<h3 id="mochilas" class="subtitulo">🎒 Mochilas</h3>
+
+<section class="productos">
+
+<div class="card">
+
+<img src="Producto 2.jpeg">
+
+<div class="info">
+
+<div class="nombre">
+Mochila Ejecutiva
+</div>
+
+<div class="precio">
+$49.900
+</div>
+
+<div class="stock">
+Stock: 3 unidades
+</div>
+
+<a class="boton"
+href="https://wa.me/5493489570499">
+Consultar
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<h3 id="billeteras" class="subtitulo">👝 Billeteras y Riñoneras</h3>
+
+<section class="productos">
+
+<div class="card">
+
+<img src="Producto 3.jpeg">
+
+<div class="info">
+
+<div class="nombre">
+Billetera Porta Celular
+</div>
+
+<div class="precio">
+$24.900
+</div>
+
+<div class="stock">
+Stock: 6 unidades
+</div>
+
+<a class="boton"
+href="https://wa.me/5493489570499">
+Consultar
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<h3 id="accesorios" class="subtitulo">📱 Accesorios</h3>
+
+<section class="productos">
+
+<div class="card">
+
+<img src="Producto 4.jpeg">
+
+<div class="info">
+
+<div class="nombre">
+Porta Celular Premium
+</div>
+
+<div class="precio">
+$19.900
+</div>
+
+<div class="stock">
+Stock: 8 unidades
+</div>
+
+<a class="boton"
+href="https://wa.me/5493489570499">
+Consultar
+</a>
+
+</div>
 
 </div>
 
 </section>
 
 <h3 id="materas" class="subtitulo">🧉 Materas y Loncheras</h3>
-<p class="mensaje">Próximamente nuevos productos</p>
 
-<h3 id="deportes" class="subtitulo">🏃 Deportes y Aire Libre</h3>
-<p class="mensaje">Próximamente nuevos productos</p>
+<p style="text-align:center;">
+Próximamente nuevos productos
+</p>
 
-<h3 id="juguetes" class="subtitulo
+<h3 id="juguetes" class="subtitulo">🧸 Juguetes</h3>
+
+<p style="text-align:center;">
+Próximamente nuevos productos
+</p>
+
+<section class="contacto">
+
+<h2>🚚 Envíos</h2>
+
+<p>
+Realizamos envíos a todo el país.
+</p>
+
+<p>
+Consultanos costos y tiempos de entrega según tu localidad.
+</p>
+
+</section>
+
+<section class="contacto">
+
+<h2>💳 Medios de Pago</h2>
+
+<p>✔ Efectivo</p>
+<p>✔ Transferencia Bancaria</p>
+<p>✔ Mercado Pago</p>
+<p>✔ Tarjetas de Crédito y Débito</p>
+
+</section>
+
+<section class="contacto">
+
+<h2>Contacto</h2>
+
+<p>
+📷 Instagram: @kabymas
+</p>
+
+<p>
+📱 WhatsApp: +54 9 3489 57-0499
+</p>
+
+<p>
+✨ Seguinos para conocer promociones y novedades.
+</p>
+
+</section>
+
+<footer>
+
+© 2026 KABYMÁS
+
+</footer>
+
+</body>
+</html>

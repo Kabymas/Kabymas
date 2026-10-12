@@ -19,7 +19,7 @@ box-sizing:border-box;
 }
 
 body{
-font-family:Arial, sans-serif;
+font-family:Arial,sans-serif;
 background:#f7f0ea;
 color:#5f5755;
 }
@@ -29,31 +29,29 @@ text-align:center;
 padding:40px 20px;
 }
 
-header img{
+.logo{
 max-width:250px;
 width:90%;
 }
 
 .frase{
 margin-top:20px;
-font-size:20px;
+font-size:18px;
 }
 
 .redes{
 margin-top:20px;
 }
 
-.redes p{
-margin:10px 0;
-}
-
-a{
+.redes a{
+display:block;
+margin:8px 0;
 color:#c0846b;
 font-weight:bold;
 text-decoration:none;
 }
 
-a:hover{
+.redes a:hover{
 text-decoration:underline;
 }
 
@@ -68,8 +66,7 @@ margin:25px auto;
 background:#d6b4a2;
 color:white;
 padding:15px;
-max-width:900px;
-margin:20px auto;
+margin:20px;
 border-radius:12px;
 text-align:center;
 font-weight:bold;
@@ -78,7 +75,7 @@ font-weight:bold;
 .quienes{
 max-width:900px;
 margin:50px auto;
-padding:0 25px;
+padding:0 20px;
 text-align:center;
 }
 
@@ -88,7 +85,6 @@ margin-bottom:20px;
 
 .quienes p{
 line-height:1.8;
-font-size:18px;
 }
 
 .categorias{
@@ -96,17 +92,17 @@ display:flex;
 justify-content:center;
 flex-wrap:wrap;
 gap:15px;
-max-width:1200px;
-margin:auto;
 padding:20px;
 }
 
 .categoria{
 background:white;
-padding:12px 20px;
+padding:12px 18px;
 border-radius:30px;
 box-shadow:0 2px 8px rgba(0,0,0,.08);
-transition:0.3s;
+text-decoration:none;
+color:#5f5755;
+font-weight:bold;
 }
 
 .categoria:hover{
@@ -114,33 +110,28 @@ background:#d6b4a2;
 color:white;
 }
 
-.categoria:hover a{
-color:white;
-text-decoration:none;
-}
-
 .titulo{
 text-align:center;
-font-size:38px;
+font-size:36px;
 margin-top:60px;
 }
 
 .subtitulo{
 text-align:center;
+font-size:28px;
 margin-top:80px;
-font-size:30px;
+margin-bottom:20px;
 }
 
 .mensaje{
 text-align:center;
 color:#888;
 font-style:italic;
-margin-top:10px;
 }
 
 .productos{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:25px;
 max-width:1200px;
 margin:30px auto;
@@ -150,52 +141,53 @@ padding:20px;
 .card{
 background:white;
 border-radius:20px;
-overflow:hidden;
+padding:20px;
 box-shadow:0 5px 15px rgba(0,0,0,.08);
+text-align:center;
 }
+
+/* IMAGENES PEQUEÑAS Y PROLIJAS */
 
 .card img{
-width:100%;
-height:280px;
-object-fit:cover;
-}
-
-.info{
-padding:20px;
+width:220px;
+height:220px;
+object-fit:contain;
+display:block;
+margin:auto;
 }
 
 .nombre{
 font-size:22px;
 font-weight:bold;
-margin-bottom:10px;
+margin-top:15px;
 }
 
 .precio{
 font-size:28px;
 font-weight:bold;
 color:#c0846b;
-margin-bottom:10px;
+margin-top:10px;
 }
 
 .stock{
+margin-top:10px;
 margin-bottom:15px;
 }
 
 .boton{
-display:block;
+display:inline-block;
 background:#d6b4a2;
 color:white;
-text-align:center;
-padding:12px;
-border-radius:10px;
+padding:12px 20px;
+border-radius:8px;
 text-decoration:none;
 }
 
 .contacto{
 max-width:900px;
 margin:60px auto;
-text-align:center;
 padding:20px;
+text-align:center;
 }
 
 .contacto p{
@@ -216,7 +208,7 @@ color:#777;
 
 <header>
 
-<img src="logo.jpeg" alt="KABYMÁS">
+<img src="logo.jpeg" alt="KABYMÁS" class="logo">
 
 <p class="frase">
 Estilo, practicidad y calidad para acompañarte todos los días.
@@ -224,19 +216,13 @@ Estilo, practicidad y calidad para acompañarte todos los días.
 
 <div class="redes">
 
-<p>
-📷
 <a href="https://instagram.com/kabymas" target="_blank">
-@kabymas
+📷 Instagram: @kabymas
 </a>
-</p>
 
-<p>
-📱
 <a href="https://wa.me/5493489570499" target="_blank">
-+54 9 3489 57-0499
+📱 WhatsApp: +54 9 3489 57-0499
 </a>
-</p>
 
 </div>
 
@@ -253,13 +239,78 @@ Estilo, practicidad y calidad para acompañarte todos los días.
 <h2>Quiénes Somos</h2>
 
 <p>
-En KABYMÁS creemos que los mejores accesorios son aquellos que combinan estilo, practicidad y calidad.
-Trabajamos para acercarte productos seleccionados con dedicación, pensados para acompañarte en cada momento y adaptarse a distintas necesidades y estilos de vida.
+En KABYMÁS creemos que los mejores accesorios son aquellos que combinan
+estilo, practicidad y calidad. Trabajamos para acercarte productos
+seleccionados con dedicación para acompañarte en cada momento.
 </p>
 
 </section>
 
 <section class="categorias">
 
-<div class="categoria">
-<a href="#bolsos">👜 
+<a class="categoria" href="#bolsos">👜 Bolsos y Carteras</a>
+
+<a class="categoria" href="#mochilas">🎒 Mochilas y Porta Notebook</a>
+
+<a class="categoria" href="#billeteras">👝 Billeteras y Riñoneras</a>
+
+<a class="categoria" href="#accesorios">📱 Accesorios</a>
+
+<a class="categoria" href="#materas">🧉 Materas y Loncheras</a>
+
+<a class="categoria" href="#deportes">🏃 Deportes y Aire Libre</a>
+
+<a class="categoria" href="#juguetes">🧸 Juguetes</a>
+
+<a class="categoria" href="#otros">☂️ Otros Complementos</a>
+
+</section>
+
+<h2 class="titulo">
+Colección KABYMÁS
+</h2>
+
+<h3 id="bolsos" class="subtitulo">👜 Bolsos y Carteras</h3>
+<p class="mensaje">Próximamente nuevos productos</p>
+
+<h3 id="mochilas" class="subtitulo">🎒 Mochilas y Porta Notebook</h3>
+<p class="mensaje">Próximamente nuevos productos</p>
+
+<h3 id="billeteras" class="subtitulo">👝 Billeteras y Riñoneras</h3>
+<p class="mensaje">Próximamente nuevos productos</p>
+
+<h3 id="accesorios" class="subtitulo">📱 Porta Celulares y Accesorios</h3>
+
+<section class="productos">
+
+<div class="card">
+
+<img src="Producto 1.jpeg" alt="Producto">
+
+<div class="nombre">
+Producto de Ejemplo
+</div>
+
+<div class="precio">
+$29.900
+</div>
+
+<div class="stock">
+Stock: 5 unidades
+</div>
+
+<a class="boton" href="https://wa.me/5493489570499" target="_blank">
+Consultar
+</a>
+
+</div>
+
+</section>
+
+<h3 id="materas" class="subtitulo">🧉 Materas y Loncheras</h3>
+<p class="mensaje">Próximamente nuevos productos</p>
+
+<h3 id="deportes" class="subtitulo">🏃 Deportes y Aire Libre</h3>
+<p class="mensaje">Próximamente nuevos productos</p>
+
+<h3 id="juguetes" class="subtitulo

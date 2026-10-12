@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>KABYMAS</title>
+<title>KABYMÁS</title>
 
 <style>
 
@@ -31,7 +31,7 @@ max-width:300px;
 width:90%;
 }
 
-header p{
+.frase{
 margin-top:20px;
 font-size:20px;
 }
@@ -43,30 +43,60 @@ background:#d6b4a2;
 margin:30px auto;
 }
 
+.promocion{
+background:#d6b4a2;
+color:white;
+padding:15px;
+max-width:750px;
+margin:20px auto;
+border-radius:12px;
+font-weight:bold;
+text-align:center;
+}
+
+.quienes{
+max-width:900px;
+margin:50px auto;
+padding:0 25px;
+text-align:center;
+}
+
+.quienes h2{
+margin-bottom:20px;
+}
+
+.quienes p{
+line-height:1.8;
+font-size:18px;
+}
+
 .categorias{
 display:flex;
 justify-content:center;
 gap:15px;
 flex-wrap:wrap;
 padding:20px;
+max-width:1200px;
+margin:auto;
 }
 
 .categoria{
 background:white;
 padding:12px 22px;
 border-radius:30px;
-box-shadow:0 2px 8px rgba(0,0,0,0.08);
+box-shadow:0 2px 8px rgba(0,0,0,.08);
 }
 
 .titulo{
 text-align:center;
-font-size:32px;
+font-size:36px;
 margin-top:40px;
+margin-bottom:25px;
 }
 
 .productos{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 gap:25px;
 padding:40px;
 max-width:1200px;
@@ -97,9 +127,9 @@ margin-bottom:10px;
 }
 
 .precio{
-font-size:28px;
-color:#c0846b;
+font-size:30px;
 font-weight:bold;
+color:#c0846b;
 margin-bottom:10px;
 }
 
@@ -111,15 +141,32 @@ margin-bottom:20px;
 display:block;
 background:#d6b4a2;
 color:white;
+text-decoration:none;
 text-align:center;
 padding:12px;
-text-decoration:none;
-border-radius:8px;
+border-radius:10px;
+font-weight:bold;
+}
+
+.contacto{
+max-width:900px;
+margin:60px auto;
+padding:30px;
+text-align:center;
+}
+
+.contacto h2{
+margin-bottom:20px;
+}
+
+.contacto p{
+margin:10px 0;
+line-height:1.8;
 }
 
 footer{
 text-align:center;
-padding:50px;
+padding:40px;
 color:#777;
 }
 
@@ -131,39 +178,70 @@ color:#777;
 
 <header>
 
-<img src="logo.jpeg" alt="Kabymas">
+<img src="logo.jpeg" alt="KABYMÁS">
 
-<p>
-Accesorios que te acompañan en cada momento
+<p class="frase">
+Estilo, practicidad y calidad para acompañarte todos los días.
 </p>
 
 <div class="separador"></div>
 
 </header>
 
+<div class="promocion">
+
+💸 10% OFF abonando en efectivo en productos seleccionados
+
+</div>
+
+<section class="quienes">
+
+<h2>Quiénes Somos</h2>
+
+<p>
+
+En KABYMÁS creemos que los mejores accesorios son aquellos que combinan estilo,
+practicidad y calidad. Trabajamos para acercarte productos seleccionados con dedicación,
+pensados para acompañarte en el día a día y adaptarse a distintos momentos y necesidades.
+
+</p>
+
+</section>
+
 <section class="categorias">
 
-<div class="categoria">👜 Bolsos</div>
-<div class="categoria">👝 Riñoneras</div>
-<div class="categoria">🎒 Mochilas</div>
-<div class="categoria">📱 Porta Celulares</div>
+<div class="categoria">👜 Bolsos y Carteras</div>
+
+<div class="categoria">🎒 Mochilas y Porta Notebook</div>
+
+<div class="categoria">👝 Billeteras y Riñoneras</div>
+
+<div class="categoria">📱 Porta Celulares y Accesorios</div>
+
+<div class="categoria">🧉 Materas y Loncheras</div>
+
+<div class="categoria">🏃 Deportes y Aire Libre</div>
+
+<div class="categoria">🧸 Juguetes</div>
+
+<div class="categoria">☂️ Otros Complementos</div>
 
 </section>
 
 <h2 class="titulo">
-Productos Destacados
+Colección KABYMÁS
 </h2>
 
 <section class="productos">
 
 <div class="card">
 
-<img src="Producto 1.jpeg">
+<img src="Producto 1.jpeg" alt="Producto">
 
 <div class="info">
 
 <div class="nombre">
-Producto
+Nombre del Producto
 </div>
 
 <div class="precio">
@@ -174,8 +252,8 @@ $ 0
 Stock disponible
 </div>
 
-<a href="#" class="boton">
-Próximamente WhatsApp
+<a class="boton" href="https://wa.me/5493489570499" target="_blank">
+Consultar
 </a>
 
 </div>
@@ -184,12 +262,12 @@ Próximamente WhatsApp
 
 <div class="card">
 
-<img src="Producto 2.jpeg">
+<img src="Producto 2.jpeg" alt="Producto">
 
 <div class="info">
 
 <div class="nombre">
-Producto
+Nombre del Producto
 </div>
 
 <div class="precio">
@@ -200,8 +278,8 @@ $ 0
 Stock disponible
 </div>
 
-<a href="#" class="boton">
-Próximamente WhatsApp
+<a class="boton" href="https://wa.me/5493489570499" target="_blank">
+Consultar
 </a>
 
 </div>
@@ -210,11 +288,34 @@ Próximamente WhatsApp
 
 </section>
 
+<section class="contacto">
+
+<h2>Contacto</h2>
+
+<p>
+📷 Instagram: <strong>@kabymas</strong>
+</p>
+
+<p>
+📱 WhatsApp: <strong>+54 9 3489 57-0499</strong>
+</p>
+
+<p>
+Atención personalizada para ayudarte a encontrar el producto ideal.
+</p>
+
+<p>
+✨ Seguinos en Instagram para conocer novedades, promociones y nuevos ingresos.
+</p>
+
+</section>
+
 <footer>
 
-© KABYMAS
+© 2026 KABYMÁS
 
 </footer>
 
 </body>
+
 </html>
